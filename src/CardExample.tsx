@@ -10,12 +10,16 @@ function CardExample(): JSX.Element {
       {stats.map((item: StatItem, index: number) => (
         <CCard key={index} className="card-border" style={{ width: "150px" }}>
           <CCardBody>
-            <CCardTitle style={{ textAlign: "left" }}>
+            <CCardTitle style={{ textAlign: "left", marginTop: "-20px" }}>
               😀{item.title}
             </CCardTitle>
             <h2> {item.value}</h2>
-            <p style={{ color: "green" }}>▲ Added: {item.added}</p>
-            <p style={{ color: "red" }}>▼ Removed: {item.removed}</p>
+            <p style={{ color: "green", textAlign: "left", margin: 0 }}>
+              ▲ Added: {item.added}
+            </p>
+            <p style={{ color: "red", textAlign: "left", margin: 0 }}>
+              ▼ Removed: {item.removed}
+            </p>
           </CCardBody>
         </CCard>
       ))}

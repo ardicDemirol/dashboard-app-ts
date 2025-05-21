@@ -4,8 +4,10 @@ import { ChartDoughnutAndPieExample } from "./ChartDoughnutAndPieExample";
 
 function App() {
   return (
-    <div style={{ display: "flex", gap: "32px" }}>
-      <ChartDoughnutAndPieExample />
+    <div className="main-layout">
+      <div className="chart-fixed">
+        <ChartDoughnutAndPieExample />
+      </div>
       <CardExample />
     </div>
   );

@@ -42,7 +42,7 @@ export const ChartDoughnutAndPieExample = () => {
       {
         backgroundColor: ["#28a745", "#dc3545"],
         data: [62, 16],
-        borderWidth: 1,
+        borderWidth: 2,
       },
     ],
   };
@@ -56,6 +56,9 @@ export const ChartDoughnutAndPieExample = () => {
           color: getStyle("--cui-body-color"),
         },
       },
+      tooltip: {
+        enabled: false,
+      },
     },
     maintainAspectRatio: false,
   };
@@ -63,7 +66,9 @@ export const ChartDoughnutAndPieExample = () => {
   return (
     <CCard className="chart-card">
       <CCardBody>
-        <CCardTitle>Total changes</CCardTitle>
+        <CCardTitle style={{ fontSize: "24px", marginTop: "5px" }}>
+          Total changes
+        </CCardTitle>
         <div className="chart-wrapper">
           <div className="chart-container">
             <CChart

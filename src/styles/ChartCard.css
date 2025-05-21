@@ -1,7 +1,7 @@
 .chart-card {
   width: 300px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 16px;
 }
 
 .chart-wrapper {
@@ -22,8 +22,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
+}
+
+.chart-fixed {
+  height: 300px;
+  flex-shrink: 0;
 }
 
 .legend-text {

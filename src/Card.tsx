@@ -1,5 +1,4 @@
 import { CCard, CCardBody, CCardTitle } from "@coreui/react";
-import "./App.css";
 import { stats } from "./data/stats";
 import type { StatItem } from "./data/stats";
 import type { JSX } from "react";

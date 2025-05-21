@@ -1,54 +1,103 @@
-# React + TypeScript + Vite
+# Dashboard App (React + TypeScript + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a dashboard application that combines React, TypeScript, and Vite to enable the development of modern web applications. It aims to provide fast development, easy customization, and the advantages of the modern JavaScript/TypeScript ecosystem.
 
-Currently, two official plugins are available:
+<img src="./public/dashboard-sample.png" alt="Dashboard Screenshot" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Component-based UI** with React
+- **Type safety** and enhanced IDE support with TypeScript
+- **Fast builds and HMR** (Hot Module Replacement) with Vite
+- **Modern UI** with @coreui/react and **charts** with @coreui/react-chartjs
+- Dynamic cards and doughnut charts for statistical data visualization
+- Easily extendable and customizable structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To run the project locally, follow these steps:
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/ardicDemirol/dashboard-app-ts.git
+   cd dashboard-app-ts
+   ```
+
+2. Install dependencies:
+   ```sh
+   npm install
+   # or
+   yarn
+   ```
+
+### Development Server
+
+To start the development server:
+
+```sh
+npm run dev
+# or
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Production Build
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+To build the project for production:
+
+```sh
+npm run build
+# or
+yarn build
 ```
+
+### Linting
+
+To check code quality:
+
+```sh
+npm run lint
+# or
+yarn lint
+```
+
+## Project Structure
+
+```
+src/
+  App.tsx           # Main application component
+  Card.tsx          # Statistic cards component
+  ChartDoughnutAndPieExample.tsx  # Doughnut chart component
+  data/
+    stats.ts        # Sample static data
+  styles/
+    ChartCard.css   # Chart card specific styles
+  App.css           # General application styles
+public/
+  index.html        # HTML entry point
+```
+
+## Main Dependencies
+
+- **React** (`react`, `react-dom`)
+- **Vite** (`vite`, `@vitejs/plugin-react`)
+- **TypeScript**
+- **@coreui/react**, **@coreui/react-chartjs** (UI and charts)
+- **ESLint** and related plugins (for code quality)
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+For more information or to contribute, please open an issue or submit a pull request!

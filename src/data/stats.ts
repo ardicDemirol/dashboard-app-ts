@@ -1,4 +1,3 @@
-// data/stats.ts
 export interface StatItem {
   title: string;
   value: number;

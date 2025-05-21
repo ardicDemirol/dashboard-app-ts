@@ -1,14 +1,19 @@
+import { useEffect } from "react";
 import "./App.css";
-import CardExample from "./CardExample";
-import { ChartDoughnutAndPieExample } from "./ChartDoughnutAndPieExample";
+import Card from "./Card";
+import { ChartDoughnutAndPie } from "./ChartDoughnutAndPieExample";
 
 function App() {
+  useEffect(() => {
+    document.title = "Dashboard";
+  }, []);
+
   return (
     <div className="main-layout">
       <div className="chart-fixed">
-        <ChartDoughnutAndPieExample />
+        <ChartDoughnutAndPie />
       </div>
-      <CardExample />
+      <Card />
     </div>
   );
 }

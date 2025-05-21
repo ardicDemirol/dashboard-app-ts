@@ -6,7 +6,7 @@ import type { ChartData, ChartOptions } from "chart.js";
 import { CCard, CCardBody, CCardTitle } from "@coreui/react";
 import "./styles/ChartCard.css";
 
-export const ChartDoughnutAndPieExample = () => {
+export const ChartDoughnutAndPie = () => {
   const chartRef = useRef<Chart<"doughnut"> | null>(null);
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export const ChartDoughnutAndPieExample = () => {
   return (
     <CCard className="chart-card">
       <CCardBody>
-        <CCardTitle style={{ fontSize: "24px", marginTop: "5px" }}>
+        <CCardTitle style={{ fontSize: "24px", marginTop: "-10px" }}>
           Total changes
         </CCardTitle>
         <div className="chart-wrapper">
